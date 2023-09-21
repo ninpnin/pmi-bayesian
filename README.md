@@ -43,9 +43,11 @@ $$
 \pi_x &\sim \text{Beta}(1, 1) \\
 \frac{\lambda}{\lambda +1} &\sim \text{Beta}(\alpha, \alpha) \\
 \pi_{xy} &= \lambda \pi_x \\
-x &\sim \text{Bin}(N, \pi_x) \\
-x &\mid y \sim \text{Bin}(N_y, \pi_{xy})
+N_x &\sim \text{Bin}(N, \pi_x) \\
+N_{x \mid y} &\sim \text{Bin}(N_y, \pi_{xy})
 \end{aligned}
 $$
+
+where $N_{x}$ and $N_{x \mid y}$ are the counts of the word $x$ in total and given that $y$ occurs in the context window, respectively.
 
 The model is implemented in pmi.stan.

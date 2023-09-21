@@ -2,7 +2,7 @@ library(rjson)
 library(rstan)
 library(lubridate)
 
-setwd("~/Documents/pmi-bayesian/")
+setwd("~/Work/pmi-bayesian/")
 
 train_dat <- list(y=5, n=1000000, y_mid_x=1, n_mid_x=10)
 train_dat
